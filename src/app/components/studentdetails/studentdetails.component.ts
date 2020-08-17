@@ -11,8 +11,7 @@ export class StudentdetailsComponent implements OnInit {
   constructor(private _studentService: StudentService) { }
 
   ngOnInit() {
-    this.students = this._studentService.getStudent();
-    console.log(JSON.stringify(this.students));
+    this._studentService.getStudent().subscribe(response => this.students = response);
   }
   title = "Angular training student details";
 

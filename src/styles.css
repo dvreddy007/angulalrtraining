@@ -48,7 +48,7 @@ body{
 }
 .main{      
     padding: 1rem;
-    height: 75vh;
+    min-height: 75vh;
 }
   h1,
   h2,

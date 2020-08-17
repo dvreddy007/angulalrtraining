@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { UserdetailsComponent } from './userdetails/userdetails.component';
 import { StudentdetailsComponent } from './components/studentdetails/studentdetails.component';
@@ -14,6 +15,8 @@ import { GroceriesComponent } from './components/groceries/groceries.component';
 import { MaterialModule } from './material.module';
 import { StudentlistComponent } from './components/studentlist/studentlist.component';
 import { StudentService } from './services/student.service'
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { MydialogmodalComponent } from './components/mydialogmodal/mydialogmodal.component';
 
 @NgModule({
   declarations: [
@@ -26,13 +29,17 @@ import { StudentService } from './services/student.service'
     FooterComponent,
     SidebarComponent,
     GroceriesComponent,
-    StudentlistComponent
+    StudentlistComponent,
+    MydialogmodalComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [StudentService],
   bootstrap: [AppComponent]

@@ -1,1 +1,37 @@
 <p>groceries works!</p>
+<!-- <mat-form-field>
+    <input matInput [(ngModel)]="sendValue" placeholder="Enter value for Dialog">
+</mat-form-field>
+<div *ngIf="dialogValue">
+    <b>Value From Dialog</b>: {{dialogValue}}
+</div>
+<div>
+    <button mat-raised-button (click)="openDialog()">Open Dialog</button>
+</div> -->
+
+<div class="example-container">
+    <form [formGroup]="myUserForm" (ngSubmit)="onSubmitUsrForm()">
+        <mat-form-field class="form-field">
+            <input formControlName="username" matInput placeholder="User Name*">
+            <mat-error>This field is mandatory.</mat-error>
+        </mat-form-field><br>
+        <mat-form-field>
+            <mat-label>Enter your password</mat-label>
+            <input formControlName="password" matInput [type]="hide ? 'password' : 'text'">
+            <mat-error>This field is mandatory.</mat-error>
+            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                [attr.aria-pressed]="hide">
+                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Amount</mat-label>
+            <input matInput formControlName="amount" type="number" class="example-right-align">
+            <span matPrefix>$&nbsp;</span>
+            <span matSuffix>.00</span>
+            <mat-error>This field is mandatory.</mat-error>
+        </mat-form-field>
+        <button mat-raised-button color="primary" type="submit" [disabled]="myUserForm.invalid">Save</button>
+    </form>
+</div>

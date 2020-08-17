@@ -1,9 +1,24 @@
 <h1>
     Student Details
 </h1>
+<!-- <p *ngFor="let student of students">
+    The title is <strong>{{student.title}}</strong>, body text is {{student.body}}
+</p> -->
 <p *ngFor="let student of students">
-    The name of user <strong>{{student.name}}</strong>, roll no is <strong>{{student.rollno}}</strong>, and his/her
+    The name of user <strong>{{student.name}}</strong>, email is <strong>{{student.email}}</strong>, and his/her
     interested
     subject is <strong>{{student.interested}}</strong> and
     his/her hobbies are <strong>{{student.hobbies}}</strong>
 </p>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>website</th>
+    </tr>
+    <tr *ngFor="let student of students">
+        <td>{{student.name}}</td>
+        <td>{{student.email}}</td>
+        <td>{{student.website}}</td>
+    </tr>
+</table>
