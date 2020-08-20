@@ -1,0 +1,8 @@
+<h3>Parent Component</h3>
+
+<label>Parent Component</label>
+<input type="text" #pcomponent [(ngModel)]="CData" />
+<button (click)="parseData()">pass info</button>
+
+<p>Value of child component is: {{ CData }}</p>
+<app-child [PData]="pcomponent.value" (childEvent)="CData=$event"></app-child>

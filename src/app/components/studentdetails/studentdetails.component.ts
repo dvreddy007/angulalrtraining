@@ -9,10 +9,12 @@ import { StudentService } from '../../services/student.service';
 export class StudentdetailsComponent implements OnInit {
   public students = []
   constructor(private _studentService: StudentService) { }
-
+  public showTable = false;
   ngOnInit() {
     this._studentService.getStudent().subscribe(response => this.students = response);
   }
   title = "Angular training student details";
-
+  showTableInfo() {
+    this.showTable = true;
+  }
 }

@@ -17,7 +17,9 @@ import { StudentlistComponent } from './components/studentlist/studentlist.compo
 import { StudentService } from './services/student.service'
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { MydialogmodalComponent } from './components/mydialogmodal/mydialogmodal.component';
-
+import { ChildComponent } from './components/child/child.component';
+import { ParentComponent } from './components/parent/parent.component';
+import { AdminModule } from './admin/admin.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +32,9 @@ import { MydialogmodalComponent } from './components/mydialogmodal/mydialogmodal
     SidebarComponent,
     GroceriesComponent,
     StudentlistComponent,
-    MydialogmodalComponent
+    MydialogmodalComponent,
+    ChildComponent,
+    ParentComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +43,8 @@ import { MydialogmodalComponent } from './components/mydialogmodal/mydialogmodal
     MaterialModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AdminModule
   ],
   providers: [StudentService],
   bootstrap: [AppComponent]

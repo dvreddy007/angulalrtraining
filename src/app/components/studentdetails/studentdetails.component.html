@@ -10,7 +10,9 @@
     subject is <strong>{{student.interested}}</strong> and
     his/her hobbies are <strong>{{student.hobbies}}</strong>
 </p>
-<table>
+<p><button (click)="showTableInfo()">Show Table</button></p>
+
+<table *ngIf="showTable">
     <tr>
         <th>Name</th>
         <th>Email</th>
