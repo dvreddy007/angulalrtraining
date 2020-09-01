@@ -7,9 +7,11 @@ import { MatAccordion } from '@angular/material/expansion'
 })
 export class EmployeedetailsComponent implements OnInit {
   @ViewChild(MatAccordion) accordion: MatAccordion;
+  public myAngularxQrCode: string = null;
   constructor() { }
 
   ngOnInit(): void {
+    this.myAngularxQrCode = 'ETV 9PM News';
   }
 
 }

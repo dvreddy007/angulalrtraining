@@ -2,6 +2,9 @@
 <button mat-raised-button color="primary">Submit</button>
 <br>
 <br>
+
+<input type="text" [(ngModel)]="myAngularxQrCode">
+<qrcode [qrdata]="myAngularxQrCode" [width]="256" [errorCorrectionLevel]="'M'"></qrcode>
 <!-- 
 <mat-card> content container for text, photos, and actions in the context of a single subject</mat-card>
 <br>

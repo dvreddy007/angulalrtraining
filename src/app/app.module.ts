@@ -20,6 +20,10 @@ import { MydialogmodalComponent } from './components/mydialogmodal/mydialogmodal
 import { ChildComponent } from './components/child/child.component';
 import { ParentComponent } from './components/parent/parent.component';
 import { AdminModule } from './admin/admin.module';
+import { QRCodeModule } from 'angularx-qrcode';
+import { NgxQRCodeModule } from 'ngx-qrcode2';
+//import { registerElement } from "../../node_modules/nativescript-barcodescanner";
+//registerElement("BarcodeScanner", () => require("nativescript-barcodescanner").BarcodeScannerView);
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,7 +48,9 @@ import { AdminModule } from './admin/admin.module';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    AdminModule
+    AdminModule,
+    QRCodeModule,
+    NgxQRCodeModule,
   ],
   providers: [StudentService],
   bootstrap: [AppComponent]
